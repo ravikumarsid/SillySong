@@ -40,7 +40,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="pIk-XN-ffu">
-                                <rect key="frame" x="38" y="137.5" width="300" height="30"/>
+                                <rect key="frame" x="38" y="138" width="299" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
@@ -49,9 +49,12 @@
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="nJb-Ns-aSv"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="A silly song special for you!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fXs-vD-czO">
-                                <rect key="frame" x="37" y="215.5" width="300" height="129.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" text="A silly song special for you!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fXs-vD-czO">
+                                <rect key="frame" x="37" y="216" width="300" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="yMS-aC-PxM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -59,14 +62,13 @@
                         <color key="backgroundColor" red="0.27489458470291428" green="0.70856824385455197" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="om5-Da-O3p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Dxm-Et-I4K"/>
+                            <constraint firstItem="fXs-vD-czO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FMM-3N-zNl"/>
+                            <constraint firstItem="fXs-vD-czO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="IVm-bk-i3j"/>
                             <constraint firstItem="om5-Da-O3p" firstAttribute="centerX" secondItem="pIk-XN-ffu" secondAttribute="centerX" id="OHe-on-WQq"/>
-                            <constraint firstItem="fXs-vD-czO" firstAttribute="top" secondItem="pIk-XN-ffu" secondAttribute="bottom" constant="48" id="RJe-lD-gLw"/>
-                            <constraint firstItem="fXs-vD-czO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="TsS-Im-qUz"/>
                             <constraint firstItem="om5-Da-O3p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jA5-sz-daA"/>
                             <constraint firstItem="pIk-XN-ffu" firstAttribute="top" secondItem="om5-Da-O3p" secondAttribute="bottom" constant="46" id="lqA-qZ-by8"/>
                             <constraint firstItem="pIk-XN-ffu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="qCj-5L-cd0"/>
-                            <constraint firstItem="fXs-vD-czO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rb5-xH-e4B"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fXs-vD-czO" secondAttribute="bottom" constant="322" id="srx-K4-SX0"/>
+                            <constraint firstItem="fXs-vD-czO" firstAttribute="top" secondItem="pIk-XN-ffu" secondAttribute="bottom" constant="48" id="yc2-gp-OdK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
