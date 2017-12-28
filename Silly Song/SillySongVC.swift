@@ -9,7 +9,7 @@
 import UIKit
 
 class SillySongVC: UIViewController {
-
+    
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var lyricsView: UITextView!
     
@@ -27,8 +27,8 @@ class SillySongVC: UIViewController {
     }
     
     func shortNameFromName (name:String) ->String {
-        let vowels = CharacterSet.init(charactersIn: "aeiou")
         
+        let vowels = CharacterSet.init(charactersIn: "aeiou")
         var shortenedName = name.lowercased().folding(options: .diacriticInsensitive, locale: NSLocale.current)
         let firstChar: Character = shortenedName[shortenedName.startIndex]
         
@@ -49,21 +49,22 @@ class SillySongVC: UIViewController {
         
         return lyricsTemplate
     }
-
+    
     @IBAction func reset(_ sender: Any) {
         nameField.text = ""
         lyricsView.text = ""
     }
     
     @IBAction func displayLyrics(_ sender: Any) {
-        
-        let nameOfPerson: String = nameField.text!
-        let customLyrics: String = lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: nameOfPerson)
-        
-        lyricsView.text = customLyrics
+        if nameField.text != "" && !((nameField.text?.trimmingCharacters(in: .whitespaces).isEmpty)!) {
+            let nameOfPerson: String! = nameField.text
+            let customLyrics: String = lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: nameOfPerson)
+            
+            lyricsView.text = customLyrics
+        }
     }
     
-    }
+}
 
 extension SillySongVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
